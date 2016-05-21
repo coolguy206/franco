@@ -10,7 +10,7 @@ body {
 	}
 }
 
-.active {
+.showThis {
 	display: block !important;
 }
 
@@ -101,8 +101,17 @@ body {
 	}
 }
 
-.main-content {
-	
+.copyright {
+	clear: both;
+	margin-bottom: 20px;
+
+	span {
+		color: #000;
+
+		a {
+			color: #000;
+		}
+	}
 }
 
 
@@ -214,6 +223,7 @@ body {
 
 	textarea {
 		margin-bottom: 10px;
+		height: 200px;
 	}
 
 	button {
@@ -233,8 +243,48 @@ body {
 	padding: 20px;
 }
 
+.form-success {
+	position: fixed;
+	top: 15%;
+	left: 30%;
+	text-align: center;
+	padding: 10px;
+	background: #fff;
+	border: 3px solid @orange;
+	border-radius: 7px;
+	font-weight: bold;
+	font-size: 2em;
+	color: @orange;
+	z-index:999;
+
+	@media screen and(max-width: 737px) {
+		left: 27%;
+	}
+
+	@media screen and(max-width: 668px) {
+		left: 21%;
+	}
+
+	@media screen and(max-width: 569px) {
+		left: 17%;
+	}
+
+	@media screen and(max-width: 481px) {
+		left: 12%;
+	}
+
+	@media screen and(max-width: 415px) {
+		left: 6%;
+	}
+
+	@media screen and(max-width: 376px) {
+		left: 1%;
+	}
+}
+
 .bg {
 	min-height: 500px;
+
 }
 
 #home {
@@ -243,6 +293,48 @@ body {
 		margin-bottom: 10px;
 
 		a {
+			display:block;
+
+			i.glyphicon {
+				position: absolute;
+				left: 36%;
+				top: 36%;
+
+				@media screen and(max-width: 569px) {
+					left: 33%;
+					top: 29%;
+				}
+
+				@media screen and(max-width: 481px) {
+					left: 30%;
+					top: 23%;
+				}
+
+				@media screen and(max-width: 415px) {
+					left: 25%;
+					top: 24%;
+				}
+
+				@media screen and(max-width: 376px) {
+					left: 22%;
+					top: 16%;
+				}
+
+				@media screen and(max-width: 321px) {
+					left: 27%;
+					top: 23%;
+				}
+				
+			}
+
+			i.glyphicon-play-circle {
+				font-size: 6em;
+				color:#fff;
+
+				@media screen and(max-width: 321px) {
+					font-size: 4em;
+				}
+			}
 
 			img {
 				max-width: 100%;
@@ -271,13 +363,87 @@ body {
 			}
 		}
 
-		div {
+		.mobile {
+			display: none;
+			overflow: hidden;
 
-			&:last-of-type {
-				text-align: right;
-				margin-bottom: 10px;
-				padding-right: 20px;
+			@media screen and(max-width:668px) {
+				display: block;
 			}
+
+			div {
+
+				&:first-of-type {
+					text-align: center;
+					margin-bottom: 10px;
+				}
+
+				&:last-of-type {
+					text-align: right;
+					margin-bottom: 10px;
+					padding-right: 20px;
+	
+				}
+
+				a {
+					color: #000;
+					display: block;
+
+					&:hover, &:active {
+						color: @orange;
+						text-decoration: none;
+					}
+
+					span {
+						@media screen and(max-width: 415px) {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		.desktop {
+			overflow: hidden;
+
+			@media screen and(max-width: 668px) {
+				display: none;
+			}
+
+			div {
+
+				a {
+					color: #000;
+					display: block;
+
+					&:hover, &:active {
+						color: @orange;
+						text-decoration: none;
+					}
+
+					span {
+						@media screen and(max-width: 415px) {
+							display: none;
+						}
+					}
+				}
+
+				.fa-calendar {
+
+					@media screen and(max-width: 415px) {
+						display: none;
+					}
+				}
+
+				&:last-of-type {
+					text-align: right;
+					margin-bottom: 10px;
+					padding-right: 20px;
+	
+				}
+
+			}
+
 		}
 		
 	}
@@ -302,10 +468,21 @@ body {
 	.location {
 		overflow: hidden;
 
+		.location-title {
+
+			@media screen and (max-width: 737px) {
+				display: none;
+			}
+		}
+
 		div {
 
 			&:last-of-type {
 				text-align: right;
+
+				@media screen and (max-width: 569px) {
+					text-align: left;
+				}
 			}
 		}
 	}
@@ -337,6 +514,29 @@ body {
 			}
 			
 		}
+	}
+
+	.pagination {
+
+		li {
+
+			a {
+				color: #000;
+			}
+			
+		}
+
+		.active {
+
+			a {
+				background-color: @orange;
+				border-color: @orange;
+				color: #fff;
+			}
+			
+		}
+
+		
 	}
 }
 
