@@ -20,6 +20,7 @@
     "handlebars": "^4.0.5",
     "hapi": "^13.2.2",
     "inert": "^3.2.0",
+    "jquery": "^2.2.3",
     "najax": "^0.4.0",
     "nodemailer": "^0.7.1",
     "sendmail": "^0.2.1",
