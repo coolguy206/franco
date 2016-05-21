@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Franco Finn | Golden State Warriors Hype-Man | San Francisco</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	<!--bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!--font awesome-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<!--mystyles-->
+	<link rel="stylesheet" href="public/css/styles.css">
+</head>
+
+<body>
+	<div id="messenger"></div>
+	<div class="container">
+
+		<div class="row header">
+			<div class="col-xs-4">
+			</div>
+			<div class="col-xs-4 col-md-9">
+				<a href="#">
+					<img src="public/images/logo.png" alt="Franco Finn">
+				</a>
+			</div>
+
+			<div class="col-xs-4 col-md-3">
+				<ul class="social-media">
+					<li>
+						<a href="https://www.facebook.com/franco.finn" target="_blank">
+							<i class="fa fa-facebook-official fa-3x"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/francofinn?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+							<i class="fa fa-twitter fa-3x"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/francofinn/?hl=en" target="_blank">
+							<i class="fa fa-instagram fa-3x"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="row content-container">
+			<div class="col-md-9 main-content">
+				
+			</div>
+
+			<div class="col-md-3" id="sidebar">
+				<span class="h4 col-md-6 current" data-tab="about">ABOUT</span>
+
+				<span class="h4 col-md-6" data-tab="contact">CONTACT</span>
+
+				<div id="about" class="showThis">
+					
+				</div>
+
+				<div id="contact">
+					
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="col-xs-4">
+					<a href="#">
+						<i class="fa fa-home fa-4x"></i>
+						<p>HOME</p>
+					</a>
+				</div>
+				<div class="col-xs-4">
+					<a href="#about">
+						<i class="fa fa-info-circle fa-4x"></i>
+						<p>ABOUT</p>
+					</a>
+				</div>
+				<div class="col-xs-4">
+					<a href="#contact">
+						<i class="fa fa-envelope-o fa-4x"></i>
+						<p>CONTACT</p>
+					</a>
+				</div>
+			</div>
+
+		</div>
+		
+	</div>
+
+
+	<script type="text/html" id="mobileTemplate">		
+		{{{Content}}}
+	</script>
+
+	<script type="text/html" id="homeTemplate">	
+		<div id="home">
+			{{#each data}}
+				<div class="col-xs-6 col-md-4">
+					<a href="#post/{{@index}}">
+					{{#if videos}}
+						<i class="glyphicon glyphicon-play-circle"></i>
+					{{/if}}
+						<img src="{{images.low_resolution.url}}">
+					</a>
+				</div>
+			{{/each}}
+		</div>
+	</script>
+
+	<script id="postTemplate" type="text/html">
+		<div id="post">
+			<div class="top h4">
+
+				<div class="mobile">
+					<div class="col-xs-12 col-md-12">
+						{{date}} <i class="fa fa-calendar fa-2x"></i>
+					</div>
+
+					<div class="col-xs-6 col-md-6">
+						{{#if isFirst}}
+							<a href="#post/{{prevPost}}"><i class="fa fa-arrow-left fa-2x"></i> <span>Prev</span></a>
+						{{/if}}
+					</div>
+
+					<div class="col-xs-6 col-md-6">
+						{{#if isLast}}
+							<a href="#post/{{nextPost}}"><span>Next</span> <i class="fa fa-arrow-right fa-2x"></i></a>
+						{{/if}}
+					</div>
+				</div>
+
+				<div class="desktop">
+					<div class="col-xs-4 col-md-4">
+						{{#if isFirst}}
+							<a href="#post/{{prevPost}}"><i class="fa fa-arrow-left fa-2x"></i> <span>Prev</span></a>
+						{{/if}}
+					</div>
+
+					<div class="col-xs-4 col-md-4 date">
+						{{date}} <i class="fa fa-calendar fa-2x"></i>
+					</div>
+
+					<div class="col-xs-4 col-md-4">
+						{{#if isLast}}
+							<a href="#post/{{nextPost}}"><span>Next</span> <i class="fa fa-arrow-right fa-2x"></i></a>
+						{{/if}}
+					</div>
+				</div>
+ 
+			</div>
+
+			<div class="content">
+				{{#if isImage}}
+					<img src="{{imageUrl}}" alt="{{title}}">
+				{{/if}}
+
+				{{#if isVideo}}
+					<video controls autoplay>
+						<source src="{{videoUrl}}" type="video/mp4">
+					</video>
+				{{/if}}
+		
+
+				<p class="h4">{{title}}</p>
+			</div>
+	
+			{{#if isMap}}
+			<div class="location">
+				<div class="col-xs-0 col-sm-4 col-md-4 location-title">
+					<h3><span>Location</span> <i class="fa fa-map fa-lg"></i></h3>
+				</div>
+				<div class="col-xs-12 col-sm-8 col-md-8">
+					<h3>{{location}}</h3>
+				</div>
+			</div>
+
+			<div id="map">
+		
+			</div>
+			{{/if}}
+			<!--
+			<h3>Comments <i class="fa fa-comments fa-lg"></i></h3>
+			<div class="comments">
+				<div class="col-xs-4 col-sm-2 col-md-2">
+					<img src="public/images/franco-finn.jpg">
+					<p>Franco Finn</p>
+				</div>
+				<div class="col-xs-8 col-sm-10 col-md-10">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat dignissim eros, ac tristique urna tempus sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus turpis mi, rhoncus congue posuere vestibulum, blandit vitae lectus. Morbi efficitur fermentum elementum. Fusce lorem enim, maximus ornare ipsum sed, blandit cursus neque. Etiam eget ante scelerisque nulla rutrum elementum. Aenean tellus velit, venenatis eu fermentum non, tincidunt id nibh. Nullam mattis nisi vel est iaculis tempus. Etiam volutpat orci sed tempor lobortis. Sed interdum libero egestas diam consequat pulvinar. Duis porttitor sapien a turpis malesuada, vel ultrices lorem consectetur.</p>
+				</div>
+			</div>
+			-->
+
+			<div>
+				<ul class="pagination">
+				{{#each objs}}
+					<li class=""><a href="#post/{{@index}}">{{@index}}</a>
+				{{/each}}
+				</ul>
+			</div>
+		</div>
+
+	</script>
+
+	
+	<!--jquery-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+	<!--bootstrap js-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+
+	<!--google maps api -->
+	<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBL3-ie8-WAaWKsnGKGqoSyNo3los-sKE&callback=initMap">
+    </script>
+
+	<!--GRUNT live reload-->
+	<!--<script src="http://localhost:35729/livereload.js"></script>-->
+
+	<!--handlebars-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+	<!--underscore-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<!--backbone-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+
+	<!--my scripts-->
+	<script src="events.js"></script>
+	<script src="bundle.js"></script>
+	
+
+</body>
+</html>
