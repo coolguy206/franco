@@ -1,0 +1,82 @@
+@import 'vars.less';
+
+.desktop {
+  @media screen and (max-width: 430px) {
+    display: none;
+  }
+}
+
+.mobile {
+  @media screen and (max-width: 430px) {
+    display: block;
+  }
+
+  display: none;
+}
+
+.cta-border {
+  @media screen and (max-width: 1679px) {
+    font-size: 0.9vw;
+  }
+
+  @media screen and (max-width: 430px) {
+    // font-size: 3vw;
+    font-size: 2.5vw;
+    // padding: 3% 0;
+    // width: 36%;
+  }
+
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  font-size: 24px;
+  color: #FFFFFF;
+  font-family: 'barlow-bold';
+  text-shadow: @text-shadow;
+  border: 2px solid #000;
+  margin: 40px 0;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-image: url('../imgs/global/Basketball-Ball-Outline.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -23%;
+    transition: all .5s;
+    transform: rotate(-180deg);
+  }
+
+  &:hover {
+    &:before {
+      left: 5%;
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.a {
+  @media screen and (max-width: 1679px) {
+    width: 10.7vw;
+    height: 2.7vw;
+  }
+
+  @media screen and (max-width: 430px) {
+    width: 43.5vw;
+    // height: 11vw;
+    height: 7vw;
+    padding: 0;
+  }
+
+  width: 180px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+}

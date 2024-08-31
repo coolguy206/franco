@@ -1,0 +1,45 @@
+@import 'vars.less';
+
+header {
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+    align-items: center;
+
+    img {
+        &[alt="Franco Finn"] {
+            width: 360px;
+        }
+
+        &[alt="Franco Finn logo"] {
+            width: 80px;
+        }
+    }
+
+    nav {
+
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            column-gap: 40px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 18px;
+                    font-family: 'barlow-bold';
+                    text-transform: uppercase;
+
+                    &:hover {
+                        color: @blue;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+}

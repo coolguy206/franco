@@ -1,0 +1,89 @@
+@import 'vars.less';
+
+.hp {
+    text-align: center;
+
+    h2 {
+        font-family: 'barlow-bold';
+        font-size: 32px;
+
+        span {
+            font-family: 'barlow-bold';
+            color: @blue;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 28px;
+
+        span {
+            font-family: 'barlow-bold';
+            color: @blue;
+        }
+    }
+
+    a {
+        &[href="/media"]{
+            background: @blue;
+        }
+    }
+
+    section {
+        display: flex;
+        column-gap: 40px;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+    }
+
+    .c1 {}
+
+    .c2 {}
+
+    .c3 {
+        div {
+            position: relative;
+
+            .the-content {
+                position: absolute;
+                bottom: 1%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                width: 100%;
+
+                h3 {
+                    font-size: 24px;
+                    font-family: 'barlow-bold';
+                    color: #fff;
+                    text-shadow: @text-shadow;
+                }
+
+                a {
+                    background: @yellow;
+
+                    &:hover {
+                        background: @blue;
+                    }
+                }
+            }
+        }
+    }
+
+    .c4 {
+        div {
+            position: relative;
+
+            &:after {
+                content: '';
+                width: 60px;
+                height: 54px;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                background-image: url('../imgs/global/youtube-icon.svg');
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

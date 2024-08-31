@@ -1,0 +1,44 @@
+@import 'fonts.less';
+@import 'classes.less';
+@import 'header.less';
+@import 'footer.less';
+
+* {
+    font-family: 'barlow-regular';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 0 40px;
+    position: relative;
+}
+
+body {
+    position: relative;
+
+    &:after {
+        content: '';
+        width: 1440px;
+        height: 1440px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-image: url('../imgs/global/filipino-star-d.png');
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-position: center;
+        background-size: contain;
+        bottom: -23vw;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
