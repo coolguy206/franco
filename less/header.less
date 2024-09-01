@@ -1,6 +1,9 @@
 @import 'vars.less';
 
 header {
+    @media screen and (max-width: 1440px){
+        column-gap: 3vw;
+    }
     display: flex;
     justify-content: center;
     column-gap: 40px;
@@ -8,10 +11,16 @@ header {
 
     img {
         &[alt="Franco Finn"] {
+            @media screen and (max-width: 1440px){
+                width: 25vw;
+            }
             width: 360px;
         }
 
         &[alt="Franco Finn logo"] {
+            @media screen and (max-width: 1440px){
+                width: 6vw;
+            }
             width: 80px;
         }
     }
@@ -26,6 +35,9 @@ header {
 
             li {
                 a {
+                    @media screen and (max-width: 1440px){
+                        font-size: 1.3vw;
+                    }
                     text-decoration: none;
                     color: #000;
                     font-size: 18px;

@@ -9,13 +9,16 @@
 }
 
 .video-player {
+    @media screen and (max-width: 1024px){
+        left: 35%;
+    }
     background: #fff;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
-    height: 90%;
+    // height: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -23,6 +26,7 @@
     text-align: center;
     border: 5px solid #000;
     overflow: hidden;
+    padding: 5vw 0;
 
     .close-icon {
         text-align: right;
@@ -31,6 +35,9 @@
         right: 20px;
 
         img {
+            @media screen and (max-width: 1440px){
+                width: 2.3vw;
+            }
             width: 60px;
 
             &:hover {
@@ -40,12 +47,18 @@
     }
 
     video {
+        @media screen and (max-width: 1440px){
+            height: 35vw;
+        }
         border: 2px solid #000;
         height: 900px;
     }
 
     img {
         &[alt="filipino star bay area"] {
+            @media screen and (max-width: 1440px){
+                width: 59vw;
+            }
             position: absolute;
             z-index: -1;
             opacity: .5;

@@ -1,6 +1,9 @@
 @import 'vars.less';
 
 footer {
+    @media screen and (max-width: 1440px){
+        column-gap: 3vw;
+    }
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -9,16 +12,25 @@ footer {
     align-items: center;
 
     div {
+        @media screen and (max-width: 1440px){
+            margin: 5vw 0;
+        }
         width: 100%;
         margin: 70px 0;
     }
 
     img {
         &[alt="Franco Finn logo"] {
+            @media screen and (max-width: 1440px){
+                width: 7.7vw;
+            }
             width: 110px;
         }
 
         &[alt="Franco Finn"] {
+            @media screen and (max-width: 1440px){
+                width: 25vw;
+            }
             width: 360px;
         }
     }
@@ -27,12 +39,18 @@ footer {
 
 
         ul {
+            @media screen and (max-width: 1440px){
+                column-gap: 3vw;
+            }
             list-style-type: none;
             display: flex;
             column-gap: 40px;
 
             li {
                 a {
+                    @media screen and (max-width: 1440px){
+                        font-size: 1.3vw;
+                    }
                     text-decoration: none;
                     color: #000;
                     font-size: 18px;
@@ -51,6 +69,9 @@ footer {
                 li {
                     a {
                         img {
+                            @media screen and (max-width: 1440px){
+                                width: 3vw;
+                            }
                             width: 40px;
                         }
 
