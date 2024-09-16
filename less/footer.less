@@ -1,9 +1,16 @@
 @import 'vars.less';
 
 footer {
-    @media screen and (max-width: 1440px){
+    @media screen and (max-width: 1440px) {
         column-gap: 3vw;
     }
+
+    @media screen and (max-width: 430px) {
+        flex-wrap: wrap;
+        column-gap: 0;
+        row-gap: 10vw;
+    }
+
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -11,46 +18,102 @@ footer {
     justify-content: center;
     align-items: center;
 
+    a {
+        &:after {
+            border: none;
+        }
+    }
+
     div {
-        @media screen and (max-width: 1440px){
+        @media screen and (max-width: 1440px) {
             margin: 5vw 0;
         }
+
+        @media screen and (max-width: 430px) {
+            order: 1;
+            margin: 0;
+        }
+
         width: 100%;
         margin: 70px 0;
     }
 
     img {
         &[alt="Franco Finn logo"] {
-            @media screen and (max-width: 1440px){
+            @media screen and (max-width: 1440px) {
                 width: 7.7vw;
             }
+
+            @media screen and (max-width: 430px) {
+                width: 19vw;
+            }
+
             width: 110px;
         }
 
         &[alt="Franco Finn"] {
-            @media screen and (max-width: 1440px){
+            @media screen and (max-width: 1440px) {
                 width: 25vw;
             }
+
+            @media screen and (max-width: 430px) {
+                width: 84vw;
+            }
+
             width: 360px;
         }
     }
 
-    nav {
+    .logo-text {
+        @media screen and (max-width: 430px) {
+            order: 4;
+            width: 100%;
+        }
 
+    }
+
+    nav {
+        @media screen and (max-width: 430px) {
+            order: 2;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        img.close-icon {
+            display: none !important;
+        }
 
         ul {
-            @media screen and (max-width: 1440px){
+            @media screen and (max-width: 1440px) {
                 column-gap: 3vw;
             }
+
+            @media screen and (max-width: 430px) {
+                column-gap: 10vw;
+            }
+
             list-style-type: none;
             display: flex;
             column-gap: 40px;
 
             li {
+
+                &.mobile {
+                    img {
+                        display: none;
+                    }
+                }
+
                 a {
-                    @media screen and (max-width: 1440px){
+                    @media screen and (max-width: 1440px) {
                         font-size: 1.3vw;
                     }
+
+                    @media screen and (max-width: 430px) {
+                        font-size: 4vw;
+                    }
+
                     text-decoration: none;
                     color: #000;
                     font-size: 18px;
@@ -65,13 +128,25 @@ footer {
         }
 
         &.social-media {
+            @media screen and (max-width: 430px) {
+                order: 3;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
             ul {
                 li {
                     a {
                         img {
-                            @media screen and (max-width: 1440px){
+                            @media screen and (max-width: 1440px) {
                                 width: 3vw;
                             }
+
+                            @media screen and (max-width: 430px) {
+                                width: 9vw;
+                            }
+
                             width: 40px;
                         }
 

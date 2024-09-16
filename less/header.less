@@ -1,43 +1,112 @@
 @import 'vars.less';
 
 header {
-    @media screen and (max-width: 1440px){
+    @media screen and (max-width: 1440px) {
         column-gap: 3vw;
     }
+
     display: flex;
     justify-content: center;
     column-gap: 40px;
     align-items: center;
+    position: relative;
 
     img {
         &[alt="Franco Finn"] {
-            @media screen and (max-width: 1440px){
+            @media screen and (max-width: 1440px) {
                 width: 25vw;
             }
+
             width: 360px;
         }
 
         &[alt="Franco Finn logo"] {
-            @media screen and (max-width: 1440px){
+            @media screen and (max-width: 1440px) {
                 width: 6vw;
             }
+
+            @media screen and (max-width: 430px) {
+                width: 28vw;
+            }
+
             width: 80px;
+        }
+
+        &[alt="menu icon"] {
+            width: 10vw;
+            position: absolute;
+            left: 9vw;
+        }
+    }
+
+    a {
+        &:after {
+            border: none;
         }
     }
 
     nav {
+        @media screen and (max-width: 430px) {
+            position: fixed;
+            width: 100%;
+            top: -300vw;
+            left: 0;
+            background: #fff;
+            height: 100%;
+            z-index: 99;
+            // display: none;
+        }
+
+        &.active {
+            top:0;
+        }
+
+        .close-icon {
+            width: 10vw;
+            position: absolute;
+            top: 10vw;
+            right: 10vw;
+        }
 
 
         ul {
+            @media screen and (max-width: 430px) {
+                flex-wrap: wrap;
+                column-gap: 0;
+                row-gap: 10vw;
+                width: 60%;
+                align-items: center;
+                justify-content: center;
+                left: 50%;
+                top: 50%;
+                position: absolute;
+                transform: translate(-60%, -40%);
+            }
+
             list-style-type: none;
             display: flex;
             column-gap: 40px;
 
             li {
+                @media screen and (max-width: 430px) {
+                    flex-basis: 100%;
+                }
+
+                img {
+                    &[alt="Franco Finn"] {
+                        width: auto;
+                    }
+                }
+
                 a {
-                    @media screen and (max-width: 1440px){
+                    @media screen and (max-width: 1440px) {
                         font-size: 1.3vw;
                     }
+
+                    @media screen and (max-width: 430px) {
+                        font-size: 8vw;
+                    }
+
                     text-decoration: none;
                     color: #000;
                     font-size: 18px;

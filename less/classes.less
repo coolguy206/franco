@@ -15,15 +15,12 @@
 }
 
 .cta-border {
-  @media screen and (max-width: 1679px) {
-    font-size: 0.9vw;
+  @media screen and (max-width: 1440px) {
+    font-size: 2vw;
   }
 
   @media screen and (max-width: 430px) {
-    // font-size: 3vw;
-    font-size: 2.5vw;
-    // padding: 3% 0;
-    // width: 36%;
+    font-size: 6vw
   }
 
   display: inline-block;
@@ -40,6 +37,9 @@
   overflow: hidden;
 
   &:before {
+    @media screen and (max-width: 430px) {
+      left:0;
+    }
     content: '';
     width: 40px;
     height: 40px;
@@ -60,15 +60,15 @@
 }
 
 .a {
-  @media screen and (max-width: 1679px) {
-    width: 10.7vw;
-    height: 2.7vw;
+  @media screen and (max-width: 1440px) {
+    width: 13vw;
+    height: 3vw;
   }
 
   @media screen and (max-width: 430px) {
-    width: 43.5vw;
+    width: 42vw;
     // height: 11vw;
-    height: 7vw;
+    height: 11vw;
     padding: 0;
   }
 

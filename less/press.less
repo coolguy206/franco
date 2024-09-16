@@ -1,13 +1,18 @@
 @import 'vars.less';
-@import 'video-player.less';
 
-.hp {
-    text-align: center;
+.press {
+    // text-align: center;
+    padding: 2vw 0;
+
+    h1 {
+        text-shadow: @text-shadow;
+    }
 
     h2 {
         @media screen and (max-width: 1440px) {
             font-size: 2.2vw;
         }
+
         @media screen and (max-width: 430px) {
             font-size: 7vw;
             // line-height: 36px;
@@ -27,6 +32,7 @@
             font-size: 1.3vw;
             line-height: 2vw;
         }
+
         @media screen and (max-width: 430px) {
             font-size: 6vw;
             line-height: 9vw;
@@ -34,17 +40,29 @@
 
         font-size: 18px;
         line-height: 28px;
+        margin: 0 0 20px;
 
         span {
             font-family: 'barlow-bold';
             color: @blue;
         }
-    }
+    } 
 
-    a {
-        &[href="/media"] {
+    .cta-border {
+        background: @yellow;
+        width: 400px;
+        margin: 0;
+        color: #fff;
+
+        &:hover {
             background: @blue;
         }
+    }
+
+
+    img {
+        width: 100%;
+        border: 2px solid #000;
     }
 
     section {
@@ -62,9 +80,14 @@
 
         display: flex;
         column-gap: 40px;
-        align-items: center;
-        justify-content: center;
+        // align-items: center;
+        justify-content: space-evenly;
         margin: 40px 0;
+        position: relative;
+
+        div {
+            width: 47%;
+        }
     }
 
     .c1 {}
@@ -97,6 +120,7 @@
                     @media screen and (max-width: 1440px) {
                         font-size: 1.7vw;
                     }
+
                     @media screen and (max-width: 430px) {
                         font-size: 6vw;
                     }
@@ -128,6 +152,7 @@
             @media screen and (max-width: 430px) {
                 width: 45vw;
             }
+
             position: relative;
 
             &:hover {
@@ -139,6 +164,7 @@
                     width: 4vw;
                     height: 4vw;
                 }
+
                 @media screen and (max-width: 430px) {
                     width: 14vw;
                     height: 10vw;

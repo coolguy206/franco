@@ -3,6 +3,12 @@ var $ = require('jquery');
 $(document).ready(function () {
   // console.log('ready');
 
+  $('.bars').on('click', function () {
+    $('header nav').addClass('active');
+  });
+  $('.close-icon').on('click', function () {
+    $('header nav').removeClass('active');
+  });
   $('.the-video').click(function () {
     var src = $(this).attr('data-video');
     // console.log(src);
