@@ -11,7 +11,7 @@ module.exports = {
 
       {
         cwd: 'html/',
-        src: ['index.html', 'press1.html'],
+        src: ['index.html', 'press1.html', 'press2.html'],
         dest: '',
       },
     ],
@@ -24,7 +24,7 @@ module.exports = {
 
       {
         cwd: 'html/',
-        src: ['index.html', 'press1.html'],
+        src: ['index.html', 'press1.html', 'press2.html'],
         dest: 'build/',
       },
     ],
