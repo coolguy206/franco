@@ -5,7 +5,19 @@
     padding: 2vw 0;
 
     h1 {
+        @media screen and (max-width: 1440px) {
+            margin: 0 0 2vw;
+            font-size: 4vw;
+        }
+
+        @media screen and (max-width: 430px) {
+            margin: 0 0 4vw;
+            font-size: 8vw;
+        }
+
         text-shadow: none;
+        margin: 0 0 20px;
+        font-size: 58px;
     }
 
     h2 {
@@ -52,7 +64,20 @@
     }
 
     iframe {
+        @media screen and (max-width: 1440px) {
+            height: 75vw;
+        }
+
+        @media screen and (max-width: 1024px) {
+            height: 82vw;
+        }
+
+        @media screen and (max-width: 430px) {
+            height: 110vw;
+        }
+
         width: 100% !important;
+        height: 1080px;
     }
 
     .read-article {
@@ -93,71 +118,6 @@
         border: 2px solid #000;
     }
 
-    .the-content {
-        @media screen and (max-width: 1440px) {
-            top: 3vw;
-            left: 3vw;
-        }
-
-        @media screen and (max-width: 430px) {
-            top: 0;
-            left: 0;
-            position: relative;
-            color: #000;
-            padding: 0 0 0 6vw;
-        }
-
-        position: absolute;
-        top: 40px;
-        left: 40px;
-        color: #fff;
-
-        h1 {
-            @media screen and (max-width: 1440px) {
-                font-size: 4vw;
-                margin: 0 0 2vw;
-            }
-
-            @media screen and (max-width: 430px) {
-                font-size: 8vw;
-                text-shadow: none;
-            }
-
-            font-size: 58px;
-            margin: 0 0 20px;
-        }
-
-        p {
-            @media screen and (max-width: 430px) {
-                text-shadow: none;
-                padding: 0;
-                margin: 0;
-            }
-
-            text-shadow: @text-shadow;
-        }
-
-        a {
-            @media screen and (max-width: 430px) {
-                color: @blue;
-                text-shadow: none;
-                font-size: 6vw;
-            }
-
-            text-shadow: @text-shadow;
-            color: #fff;
-
-            &:after {
-                @media screen and (max-width: 430px) {
-                    border-color: @blue;
-                    text-shadow: none;
-                }
-
-                border-color: #fff;
-                text-shadow: @text-shadow;
-            }
-        }
-    }
 
     section {
         @media screen and (max-width: 1440px) {
@@ -169,6 +129,7 @@
             flex-wrap: wrap;
             column-gap: 0;
             margin: 10vw 0;
+            padding: 0 6vw !important;
             // row-gap: 40px;
         }
 
@@ -198,6 +159,10 @@
             padding: 0 40px;
 
             p {
+                @media screen and (max-width: 430px) {
+                    padding: 0;
+                }
+
                 &:first-of-type {
                     margin: 0;
                 }
@@ -212,7 +177,10 @@
             flex-wrap: wrap;
 
             .first {
-                @media screen and (max-width: 430px) {}
+                @media screen and (max-width: 430px) {
+                    column-count: 1;
+                    padding: 6vw 0;
+                }
 
                 column-count: 2;
                 width: 100%;
@@ -221,6 +189,12 @@
                 padding: 40px;
                 border-top: 2px solid #000;
                 border-bottom: 2px solid #000;
+
+                p {
+                    @media screen and (max-width: 430px) {
+                        padding: 0;
+                    }
+                }
             }
 
             iframe {
@@ -229,11 +203,18 @@
         }
 
         &.c3 {
-            @media screen and (max-width: 430px) {}
+            @media screen and (max-width: 430px) {
+                margin: 0 0 10vw;
+            }
 
             margin: 0;
 
             div {
+                @media screen and (max-width: 430px) {
+                    display: block;
+                    padding: 0;
+                }
+
                 display: flex;
                 column-gap: 20px;
                 align-items: flex-start;
@@ -242,6 +223,10 @@
                 a {
 
                     img {
+                        @media screen and (max-width: 430px) {
+                            width: 99px;
+                        }
+
                         width: 100%;
                     }
 
@@ -255,6 +240,10 @@
                             white-space: nowrap;
 
                             &:after {
+                                @media screen and (max-width: 430px) {
+                                    bottom: -21px;
+                                }
+
                                 content: '';
                                 border-bottom: 2px solid @blue;
                                 display: inline-block;
@@ -268,8 +257,18 @@
                 }
 
                 div {
+                    @media screen and (max-width: 430px) {
+                        margin: 8vw 0 0;
+                    }
+
                     flex-wrap: wrap;
                     padding: 0;
+
+                    p {
+                        @media screen and (max-width: 430px) {
+                            padding: 0;
+                        }
+                    }
 
                     ul {
                         display: flex;
