@@ -11,9 +11,9 @@ const fs = require('fs');
 // var name = `nba-all-star-warriors-hype-man-franco-finn`;
 
 //? 3
-var url = `https://www.cbsnews.com/sanfrancisco/news/franco-finn-doesnt-have-a-jump-shot-but-hes-an-nba-all-star-this-weekend/`;
+// var url = `https://www.cbsnews.com/sanfrancisco/news/franco-finn-doesnt-have-a-jump-shot-but-hes-an-nba-all-star-this-weekend/`;
 
-var name = `franco-finn-doesnt-have-a-jump-shot-but-hes-an-nba-all-star-this-weekend`;
+// var name = `franco-finn-doesnt-have-a-jump-shot-but-hes-an-nba-all-star-this-weekend`;
 
 
 
