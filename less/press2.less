@@ -50,7 +50,7 @@
             font-size: 6vw;
             line-height: 9vw;
             margin: 0 0 8vw;
-            padding: 0 6vw;
+            // padding: 0 6vw;
         }
 
         // font-size: 18px;
@@ -155,8 +155,13 @@
         }
 
         &.c1 {
+            @media screen and (max-width: 1440px) {
+                padding: 0 3vw;
+            }
+
             display: block;
-            padding: 0 40px;
+            // padding: 0 40px;
+            padding:0;
 
             p {
                 @media screen and (max-width: 430px) {
@@ -170,41 +175,23 @@
         }
 
         &.c2 {
-            @media screen and (max-width: 430px) {}
-
-            margin: 0;
-
-            flex-wrap: wrap;
-
-            .first {
-                @media screen and (max-width: 430px) {
-                    column-count: 1;
-                    padding: 6vw 0;
-                }
-
-                column-count: 2;
-                width: 100%;
-                column-gap: 40px;
-                margin: 40px 0;
-                padding: 40px;
-                border-top: 2px solid #000;
-                border-bottom: 2px solid #000;
-
-                p {
-                    @media screen and (max-width: 430px) {
-                        padding: 0;
-                    }
-                }
+            @media screen and (max-width: 430px) {
+                padding: 10vw 6vw 0 !important;
             }
 
-            iframe {
-                flex-basis: 100%;
-            }
+            column-count: 1;
         }
 
         &.c3 {
             @media screen and (max-width: 430px) {
+                padding: 10vw 6vw 0 !important;
+            }
+        }
+
+        &.c4 {
+            @media screen and (max-width: 430px) {
                 margin: 0 0 10vw;
+                padding: 10vw 6vw 0 !important;
             }
 
             margin: 0;
@@ -286,7 +273,6 @@
             }
 
         }
-
 
     }
 
