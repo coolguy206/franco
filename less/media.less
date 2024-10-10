@@ -1,0 +1,86 @@
+@import 'vars.less';
+@import 'video-player.less';
+
+.hp {
+
+    .c2 {
+        .the-img {
+            @media screen and (max-width: 431px) {
+                order: 2;
+            }
+
+            width: 50%;
+
+            a {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+        div {
+            @media screen and (max-width: 431px) {
+                width: 100%;
+                margin: 10vw 0 0;
+            }
+
+            width: 50%;
+        }
+
+        .cta-border {
+            background: @yellow;
+
+            &:hover {
+                background: @blue;
+            }
+        }
+    }
+
+    .c4 {
+        @media screen and (max-width: 1440px) {
+            row-gap: 3vw;
+        }
+
+        @media screen and (max-width: 431px) {
+            row-gap: 10vw;
+            justify-content: space-between;
+        }
+
+        flex-wrap: wrap;
+        row-gap: 40px;
+
+        div {
+            @media screen and (max-width: 431px) {
+                width: 45vw;
+            }
+
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:after {
+                @media screen and (max-width: 1440px) {
+                    width: 4vw;
+                    height: 4vw;
+                }
+
+                @media screen and (max-width: 431px) {
+                    width: 14vw;
+                    height: 10vw;
+                }
+
+                content: '';
+                width: 60px;
+                height: 54px;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                background-image: url('../imgs/global/youtube-icon.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+}
