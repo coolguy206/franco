@@ -1,15 +1,19 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 var $ = require('jquery');
-$(document).ready(function () {
-  // console.log('ready');
+const overlayVideo = img => {
+  $('.the-video').on('click', function () {
+    var src = $(this).attr('data-video');
+    // console.log(src);
 
-  $('.bars').on('click', function () {
-    $('header nav').addClass('active');
+    var elem = `<div class="overlay overlay1"></div><div class="video-player video-player1"><div class="close-icon"><img src="${img}imgs/global/rectangle-xmark-solid.svg" alt="close icon"></div><video autoplay controls><source src="${img}${src}" type="video/mp4">Your browser does not support the video tag.</video><img src="${img}imgs/global/filipino-star-bay-area.svg" alt="filipino star bay area"></div>`;
+    $('main').append(elem);
+    $('.close-icon').on('click', function () {
+      $('.overlay1, .video-player1').remove();
+      // console.log('close clicked');
+    });
   });
-  $('.close-icon').on('click', function () {
-    $('header nav').removeClass('active');
-  });
-});
+};
+exports.overlayVideo = overlayVideo;
 
 
 },{"jquery":2}],2:[function(require,module,exports){
