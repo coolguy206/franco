@@ -1,0 +1,105 @@
+@import 'vars.less';
+@import 'video-player.less';
+
+.hp {
+
+    .c2 {
+        align-items: flex-start;
+
+        .the-img {
+            @media screen and (max-width: 1440px) {
+                width: 46vw !important;
+            }
+
+            @media screen and (max-width: 431px) {
+                order: 2;
+            }
+
+            width: 46%;
+
+        }
+
+        div {
+            @media screen and (max-width: 431px) {
+                width: 100%;
+                margin: 10vw 0 0;
+            }
+
+            width: 100%;
+
+            form {
+                @media screen and (max-width: 1440px) {
+                    column-gap: 3vw;
+                    row-gap: 3vw;
+                }
+
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 40px;
+                row-gap: 40px;
+
+                label {
+                    @media screen and (max-width: 1440px) {
+                        font-size: 1.7vw;
+                        padding: 0 0 0 1.4vw;
+                        margin: 0 0 1.4vw;
+                    }
+
+                    font-size: 24px;
+                    text-transform: capitalize;
+                    display: block;
+                    text-align: left;
+                    margin: 0 0 20px;
+                    padding: 0 0 0 20px;
+                }
+
+                input,
+                select {
+                    @media screen and (max-width: 1440px) {
+                        font-size: 1.7vw;
+                        width: 24.4vw;
+                        height: 3.2vw;
+                        padding: 0 0 0 1.4vw;
+                    }
+
+                    width: 350px;
+                    height: 45px;
+                    border: 1px solid #000;
+                    background: #fff;
+                    font-size: 24px;
+                    text-transform: capitalize;
+                    padding: 0 0 0 20px;
+                }
+
+                textarea {
+                    @media screen and (max-width: 1440px) {
+                        font-size: 1.7vw;
+                        width: 52vw;
+                        height: 24vw;
+                        padding: 1.4vw;
+                    }
+
+                    border: 1px solid #000;
+                    width: 745px;
+                    height: 350px;
+                    padding: 20px;
+                    font-size: 24px;
+                }
+
+                button {
+                    margin: 0;
+                }
+            }
+        }
+
+        .cta-border {
+            background: @yellow;
+
+            &:hover {
+                background: @blue;
+            }
+        }
+    }
+
+
+}
