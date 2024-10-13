@@ -5,6 +5,45 @@ module.exports = {
     flatten: true
   },
 
+  php: {
+
+    files: [
+
+      {
+        cwd: '',
+        src: ['php/*.php'],
+        dest: 'build/',
+      },
+    ],
+
+  },
+
+  js: {
+
+    files: [
+
+      {
+        cwd: '',
+        src: ['js/jsmin/*.js'],
+        dest: 'build/',
+      },
+    ],
+
+  },
+
+  css: {
+
+    files: [
+
+      {
+        cwd: '',
+        src: ['css/*.css'],
+        dest: 'build/',
+      },
+    ],
+
+  },
+
   default: {
 
     files: [
@@ -30,7 +69,5 @@ module.exports = {
     ],
 
   },
-
-
 
 };

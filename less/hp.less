@@ -141,6 +141,17 @@
 
             position: relative;
 
+            &.the-video {
+                img {
+                    @media screen and (max-width: 1440px) {
+                        width: 21.8vw;
+                    }
+                    @media screen and (max-width: 430px) {
+                        width: 46vw;
+                    }
+                }
+            }
+
             &:hover {
                 cursor: pointer;
             }

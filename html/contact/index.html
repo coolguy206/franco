@@ -5,7 +5,7 @@ include "../header2.html"
 <link rel="stylesheet" href="../css/contact.css">
 
 <div class="hp">
-    
+
     <section class="c1">
         <h1>
             Get in Touch with <span>Franco Finn</span><br>
@@ -21,16 +21,17 @@ include "../header2.html"
         </div>
 
         <div>
-            <form>
-                <input type="hidden" name="access_key" value="768508d4-cb2a-46ca-86a9-7b517093344b">
+            <!-- <form action="../php/contact-scripts.php" method="post"> -->
+            <form action="https://davidtproductions.com/franco/franco/php/contact-scripts.php" method="post">
+                <!-- <input type="hidden" name="access_key" value="768508d4-cb2a-46ca-86a9-7b517093344b"> -->
 
                 <span>
-                    <label>Name*</label>
+                    <label>Name* <span class="error">Required</span></label>
                     <input type="text" name="name" required>
                 </span>
 
                 <span>
-                    <label>Email*</label>
+                    <label>Email* <span class="error">Required</span></label>
                     <input type="email" name="email" required>
                 </span>
 
@@ -40,14 +41,14 @@ include "../header2.html"
                 </span>
 
                 <span>
-                    <label>Purpose*</label>
+                    <label>Purpose* <span class="error">Required</span></label>
                     <select name="purpose" required>
-                        <option>Please Select</option>
+                        <option value="please select">Please Select</option>
                     </select>
                 </span>
 
                 <span>
-                    <label>Message*</label>
+                    <label>Message* <span class="error">Required</span></label>
                     <textarea name="message" required>
                     </textarea>
                 </span>
@@ -140,5 +141,6 @@ include "../header2.html"
 
 <script src="../js/jsmin/scripts.min.js"></script>
 <script src="../js/jsmin/contact-scripts.min.js"></script>
+<!-- <script src="../js/browserify/contact-scripts.js"></script> -->
 
 include "../footer2.html"

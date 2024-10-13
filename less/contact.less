@@ -1,6 +1,15 @@
 @import 'vars.less';
 @import 'video-player.less';
 
+.error {
+    color: @blue; 
+    display: none;
+}
+
+.required {
+    border: 2px solid @blue !important;
+}
+
 .hp {
 
     .c2 {
@@ -13,6 +22,7 @@
 
             @media screen and (max-width: 431px) {
                 order: 2;
+                width: 100% !important;
             }
 
             width: 46% !important;
@@ -22,7 +32,8 @@
         div {
             @media screen and (max-width: 431px) {
                 width: 100%;
-                margin: 10vw 0 0;
+                // margin: 10vw 0 0;
+                margin: 0;
             }
 
             width: 100%;
@@ -31,6 +42,12 @@
                 @media screen and (max-width: 1440px) {
                     column-gap: 3vw;
                     row-gap: 3vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    justify-content: center;
+                    column-gap: 0;
+                    row-gap: 10vw;
                 }
 
                 display: flex;
@@ -43,6 +60,11 @@
                         font-size: 1.7vw;
                         padding: 0 0 0 1.4vw;
                         margin: 0 0 1.4vw;
+                    }
+
+                    @media screen and (max-width: 430px) {
+                        font-size: 5vw;
+                        padding: 0 0 0 5vw;
                     }
 
                     font-size: 24px;
@@ -62,6 +84,13 @@
                         padding: 0 0 0 1.4vw;
                     }
 
+                    @media screen and (max-width: 430px) {
+                        font-size: 5vw;
+                        padding: 0 0 0 5vw;
+                        width: 92vw;
+                        height: 11vw;
+                    }
+
                     width: 350px;
                     height: 45px;
                     border: 1px solid #000;
@@ -77,6 +106,13 @@
                         width: 52vw;
                         height: 24vw;
                         padding: 1.4vw;
+                    }
+
+                    @media screen and (max-width: 430px) {
+                        font-size: 5vw;
+                        padding: 5vw;
+                        width: 92vw;
+                        height: 80vw;
                     }
 
                     border: 1px solid #000;
