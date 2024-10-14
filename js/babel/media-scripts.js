@@ -1,6 +1,8 @@
 var $ = require('jquery');
 var overlayVideo = require('./overlay-video.js');
 $(document).ready(function () {
+  $('title').text("Franco Finn | Media | Golden State Warriors Hype-Man | San Francisco");
+
   // console.log(overlayVideo.overlayVideo);
   overlayVideo.overlayVideo('../');
   $('.video-player.iframe .close-icon').click(function () {

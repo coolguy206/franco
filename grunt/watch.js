@@ -6,8 +6,8 @@ module.exports = {
   },
 
   default: {
-    files: ['less/**/*.less', 'html/**/*.html', 'js/*.js'],
-    tasks: ['less', 'babel', 'browserify', 'uglify', 'includes'],
+    files: ['less/*.less', 'html/**/*.html', 'js/*.js', 'php/*.php'],
+    tasks: ['less', 'babel', 'browserify', 'uglify', 'includes', 'ftp_push'],
     // tasks: ['less', 'babel', 'browserify', 'includes'],
   },
 

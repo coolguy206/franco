@@ -1,18 +1,18 @@
 var $ = require('jquery');
 var overlayVideo = require('./overlay-video.js');
 var phoneConvert = require('./phone.js');
-require('dotenv').config();
 var encode = require('html-entities');
 
 // console.log(encode);
 // console.log(encode.encode('< > " \' & © ∆'));
 
 $(document).ready(function () {
+  $('title').text("Franco Finn | Contact | Golden State Warriors Hype-Man | San Francisco");
+
   // console.log(overlayVideo.overlayVideo);
   overlayVideo.overlayVideo('../');
 
   // console.log(process.env);
-  //<input type="hidden" name="access_key" value="768508d4-cb2a-46ca-86a9-7b517093344b">
 
   var options = [`auctioneer`, `wedding`, `dj`, `host`, `other`];
   $(options).each(function (i, val) {
@@ -37,7 +37,9 @@ $(document).ready(function () {
     var phone = $('input[name="phone"]');
     var purpose = $('select');
     var message = $('textarea');
-    console.log(name, email, phone, $(purpose).val(), $(message).val());
+
+    // console.log(name, email, phone, $(purpose).val(), $(message).val());
+
     $('.error').hide();
     $('input, select, textarea').removeClass('required');
     if (name !== "" && email !== "") {
@@ -50,7 +52,9 @@ $(document).ready(function () {
             phone = encode.encode($(phone).val());
             purpose = encode.encode($(purpose).val());
             message = encode.encode($(message).val());
-            console.log(`email good to go: ${name}, ${email}, ${phone}, ${purpose}, ${message}`);
+
+            // console.log(`email good to go: ${name}, ${email}, ${phone}, ${purpose}, ${message}`);
+
             var dataObj = {
               name: name,
               email: email,
@@ -58,7 +62,9 @@ $(document).ready(function () {
               purpose: purpose,
               message: message
             };
-            console.log(dataObj);
+
+            // console.log(dataObj);
+
             $.ajax({
               method: "POST",
               url: "https://davidtproductions.com/franco/franco/php/contact-scripts.php",
@@ -66,6 +72,11 @@ $(document).ready(function () {
               success: function (data) {
                 console.log(`it worked`);
                 console.log(data);
+                if (data == `success`) {
+                  $('form').hide();
+                  $('.c2').addClass('align');
+                  $('.confirmation').show();
+                }
               },
               error: function (err) {
                 console.log(`it didn't work`);

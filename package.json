@@ -27,6 +27,7 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2"
+    "@babel/core": "^7.25.2",
+    "grunt-ftp-push": "^1.2.1"
   }
 }
