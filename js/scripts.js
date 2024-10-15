@@ -11,5 +11,9 @@ $(document).ready(function () {
         $('header nav').removeClass('active');
     });
 
+    var year = new Date().getFullYear();
+
+    $('.copyright span').html(year);
+
 
 });

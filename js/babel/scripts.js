@@ -8,5 +8,7 @@ $(document).ready(function () {
   $('.close-icon').on('click', function () {
     $('header nav').removeClass('active');
   });
+  var year = new Date().getFullYear();
+  $('.copyright span').html(year);
 });
 //# sourceMappingURL=scripts.js.map
